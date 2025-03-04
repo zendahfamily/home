@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سبحة إلكترونية</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .counter {
+            font-size: 48px;
+            margin: 20px;
+        }
+        button {
+            font-size: 24px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .tasbih-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .reset-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>سبحة إلكترونية لعائلة زنداح</h1>
+    <p>اضغط على الزر لتسبيح الله</p>
+    <div class="counter" id="count">0</div>
+    <button class="tasbih-btn" onclick="increaseCount()">سبحان الله</button>
+    <button class="reset-btn" onclick="resetCount()">إعادة</button>
+
+    <script>
+        let count = 0;
+        function increaseCount() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+        function resetCount() {
+            count = 0;
+            document.getElementById("count").innerText = count;
+        }
+    </script>
+</body>
+</html>
